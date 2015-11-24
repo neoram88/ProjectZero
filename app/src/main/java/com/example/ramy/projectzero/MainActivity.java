@@ -14,8 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
-    Context context = getApplicationContext();
-
+    Context context;
     int duration = Toast.LENGTH_SHORT;
 
     @Override
@@ -33,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        context = getApplicationContext();
+
+
     }
 
     @Override
@@ -58,7 +60,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playMedia(View view){
-        CharSequence text = "Hello toast!";
+        CharSequence text = "This App play media!";
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+    }
+
+    public void loadLibrary(View view){
+        CharSequence text = "This shows Library App!";
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+    }
+    public void showBacon(View view){
+        CharSequence text = "This has something to do with Bacon!";
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+    }
+    public void bigApp(View view){
+        CharSequence text = "This is gonna show a big app";
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+    }
+    public void showScores(View view){
+        CharSequence text = "This app is gonna show Scores!";
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+    }
+    public void showCapstone(View view){
+        CharSequence text = "This will be my Capstone App!";
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
 
